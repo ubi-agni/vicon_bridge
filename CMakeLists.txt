@@ -83,7 +83,7 @@ target_link_libraries(testclient
     ${Boost_LIBRARIES}
 )
 
-set(TARGETS vicon_bridge calibrate tf_distort)
+set(TARGETS vicon_bridge calibrate tf_distort msvc_bridge)
 
 ## Mark executables and/or libraries for installation
 install(TARGETS ${TARGETS}
