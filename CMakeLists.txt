@@ -83,6 +83,14 @@ target_link_libraries(testclient
     ${Boost_LIBRARIES}
 )
 
+set(TARGETS vicon_bridge calibrate tf_distort)
+
+## Mark executables and/or libraries for installation
+install(TARGETS ${TARGETS}
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 install(DIRECTORY launch/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
