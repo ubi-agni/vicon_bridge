@@ -83,13 +83,17 @@ target_link_libraries(testclient
     ${Boost_LIBRARIES}
 )
 
-set(TARGETS vicon_bridge calibrate tf_distort msvc_bridge)
+set(TARGETS vicon_bridge calibrate tf_distort msvc_bridge )
 
 ## Mark executables and/or libraries for installation
 install(TARGETS ${TARGETS}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(FILES ${VICON_SDK_LIBRARY} ${VICON_SDK_LINK_DIR}/libboost_thread-mt.so.1.53.0  ${VICON_SDK_LINK_DIR}/libboost_system-mt.so.1.53.0
+  DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 
 install(DIRECTORY launch/
