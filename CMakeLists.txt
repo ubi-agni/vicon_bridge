@@ -82,3 +82,8 @@ target_link_libraries(testclient
     ${VICON_SDK_LIBRARY}
     ${Boost_LIBRARIES}
 )
+
+
+install(DIRECTORY launch/
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+
